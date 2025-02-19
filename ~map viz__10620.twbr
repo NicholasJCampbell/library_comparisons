@@ -1,0 +1,942 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0114.1153                               -->
+<workbook original-version='18.1' source-build='2024.3.3 (20243.25.0114.1153)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelSharedDimensions.true...ObjectModelSharedDimensions />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <SpatialFileLayer />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Jefferson_County_KY_ZIP_Codes' inline='true' name='federated.0a5mnjq1qjncte15ftkyq1bazxzi' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Jefferson_County_KY_ZIP_Codes' name='ogrdirect.0nrc54u0q36o8k1a7civ90k7dcrp'>
+            <connection class='ogrdirect' directory='C:/Users/Nick Campbell/Desktop/code_you_project/library_comparisons' filename='C:\Users\Nick Campbell\Desktop\code_you_project\library_comparisons\Jefferson_County_KY_ZIP_Codes.geojson' password='' server='' tablename='' />
+          </named-connection>
+          <named-connection caption='zipcodes_combined' name='textscan.0as9g9l0i6e22m16237e90d5b9e6'>
+            <connection class='textscan' directory='C:/Users/Nick Campbell/Desktop/code_you_project/library_comparisons' filename='zipcodes_combined.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Louisville_KY_Free_Public_Libraries' name='ogrdirect.04zu47i0s5cxdr169lkbn1x4qhk4'>
+            <connection class='ogrdirect' directory='C:/Users/Nick Campbell/Desktop/code_you_project/library_comparisons' filename='C:\Users\Nick Campbell\Desktop\code_you_project\library_comparisons\Louisville_KY_Free_Public_Libraries.geojson' password='' server='' tablename='' />
+          </named-connection>
+          <named-connection caption='library_by_location' name='textscan.129x3pa1qz7t5d13u0gb40phigiz'>
+            <connection class='textscan' directory='C:/Users/Nick Campbell/Desktop/code_you_project/library_comparisons' filename='library_by_location.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <_.fcp.ObjectModelSharedDimensions.true...relation connection='ogrdirect.0nrc54u0q36o8k1a7civ90k7dcrp' name='Jefferson_County_KY_ZIP_Codes.geojson' table='[Jefferson_County_KY_ZIP_Codes.geojson]' type='table'>
+            <columns>
+              <column datatype='integer' name='OBJECTID' ordinal='0' />
+              <column datatype='string' name='ZIPCODE' ordinal='1' />
+              <column datatype='real' name='SHAPEAREA' ordinal='2' />
+              <column datatype='real' name='SHAPELEN' ordinal='3' />
+              <column datatype='spatial' name='Geometry' ordinal='4' />
+            </columns>
+          </_.fcp.ObjectModelSharedDimensions.true...relation>
+          <_.fcp.ObjectModelSharedDimensions.true...relation connection='textscan.0as9g9l0i6e22m16237e90d5b9e6' name='zipcodes_combined.csv' table='[zipcodes_combined#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='zipcode' ordinal='1' />
+              <column datatype='real' name='Children Population Percentage' ordinal='2' />
+              <column datatype='real' name='Teen Population Percentage' ordinal='3' />
+              <column datatype='real' name='Adult Population Percentage' ordinal='4' />
+            </columns>
+          </_.fcp.ObjectModelSharedDimensions.true...relation>
+          <relation connection='ogrdirect.04zu47i0s5cxdr169lkbn1x4qhk4' name='Louisville_KY_Free_Public_Libraries.geojson' table='[Louisville_KY_Free_Public_Libraries.geojson]' type='table'>
+            <columns>
+              <column datatype='integer' name='OBJECTID' ordinal='0' />
+              <column datatype='string' name='LFPL_NAME' ordinal='1' />
+              <column datatype='string' name='LFPL_ADD' ordinal='2' />
+              <column datatype='string' name='LFPL_LOC' ordinal='3' />
+              <column datatype='string' name='LFPL_WEB' ordinal='4' />
+              <column datatype='string' name='TELEPHONE' ordinal='5' />
+              <column datatype='real' name='LATITUDE' ordinal='6' />
+              <column datatype='real' name='LONGITUDE' ordinal='7' />
+              <column datatype='spatial' name='Geometry' ordinal='8' />
+            </columns>
+          </relation>
+          <relation connection='textscan.129x3pa1qz7t5d13u0gb40phigiz' name='library_by_location.csv' table='[library_by_location#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='ItemLocation' ordinal='1' />
+              <column datatype='integer' name='zipcode' ordinal='2' />
+              <column datatype='string' name='ItemCollection' ordinal='3' />
+              <column datatype='real' name='Percent' ordinal='4' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Adult Population Percentage]' value='[zipcodes_combined.csv].[Adult Population Percentage]' />
+          <map key='[Children Population Percentage]' value='[zipcodes_combined.csv].[Children Population Percentage]' />
+          <map key='[F1 (library_by_location.csv)]' value='[library_by_location.csv].[F1]' />
+          <map key='[F1]' value='[zipcodes_combined.csv].[F1]' />
+          <map key='[Geometry (Louisville_KY_Free_Public_Libraries.geojson)]' value='[Louisville_KY_Free_Public_Libraries.geojson].[Geometry]' />
+          <map key='[Geometry]' value='[Jefferson_County_KY_ZIP_Codes.geojson].[Geometry]' />
+          <map key='[ItemCollection]' value='[library_by_location.csv].[ItemCollection]' />
+          <map key='[ItemLocation]' value='[library_by_location.csv].[ItemLocation]' />
+          <map key='[LATITUDE]' value='[Louisville_KY_Free_Public_Libraries.geojson].[LATITUDE]' />
+          <map key='[LFPL_ADD]' value='[Louisville_KY_Free_Public_Libraries.geojson].[LFPL_ADD]' />
+          <map key='[LFPL_LOC]' value='[Louisville_KY_Free_Public_Libraries.geojson].[LFPL_LOC]' />
+          <map key='[LFPL_NAME]' value='[Louisville_KY_Free_Public_Libraries.geojson].[LFPL_NAME]' />
+          <map key='[LFPL_WEB]' value='[Louisville_KY_Free_Public_Libraries.geojson].[LFPL_WEB]' />
+          <map key='[LONGITUDE]' value='[Louisville_KY_Free_Public_Libraries.geojson].[LONGITUDE]' />
+          <map key='[OBJECTID (Louisville_KY_Free_Public_Libraries.geojson)]' value='[Louisville_KY_Free_Public_Libraries.geojson].[OBJECTID]' />
+          <map key='[OBJECTID]' value='[Jefferson_County_KY_ZIP_Codes.geojson].[OBJECTID]' />
+          <map key='[Percent]' value='[library_by_location.csv].[Percent]' />
+          <map key='[SHAPEAREA]' value='[Jefferson_County_KY_ZIP_Codes.geojson].[SHAPEAREA]' />
+          <map key='[SHAPELEN]' value='[Jefferson_County_KY_ZIP_Codes.geojson].[SHAPELEN]' />
+          <map key='[TELEPHONE]' value='[Louisville_KY_Free_Public_Libraries.geojson].[TELEPHONE]' />
+          <map key='[Teen Population Percentage]' value='[zipcodes_combined.csv].[Teen Population Percentage]' />
+          <map key='[ZIPCODE]' value='[Jefferson_County_KY_ZIP_Codes.geojson].[ZIPCODE]' />
+          <map key='[zipcode (library_by_location.csv)]' value='[library_by_location.csv].[zipcode]' />
+          <map key='[zipcode]' value='[zipcodes_combined.csv].[zipcode]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[zipcodes_combined.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[library_by_location.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>OBJECTID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OBJECTID]</local-name>
+            <parent-name>[Jefferson_County_KY_ZIP_Codes.geojson]</parent-name>
+            <remote-alias>OBJECTID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Jefferson_County_KY_ZIP_Codes.geojson_89C92AA339CE4130A28F533F208FB688]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>ZIPCODE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ZIPCODE]</local-name>
+            <parent-name>[Jefferson_County_KY_ZIP_Codes.geojson]</parent-name>
+            <remote-alias>ZIPCODE</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[Jefferson_County_KY_ZIP_Codes.geojson_89C92AA339CE4130A28F533F208FB688]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>SHAPEAREA</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SHAPEAREA]</local-name>
+            <parent-name>[Jefferson_County_KY_ZIP_Codes.geojson]</parent-name>
+            <remote-alias>SHAPEAREA</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Jefferson_County_KY_ZIP_Codes.geojson_89C92AA339CE4130A28F533F208FB688]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>SHAPELEN</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SHAPELEN]</local-name>
+            <parent-name>[Jefferson_County_KY_ZIP_Codes.geojson]</parent-name>
+            <remote-alias>SHAPELEN</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Jefferson_County_KY_ZIP_Codes.geojson_89C92AA339CE4130A28F533F208FB688]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Geometry</remote-name>
+            <remote-type>8</remote-type>
+            <local-name>[Geometry]</local-name>
+            <parent-name>[Jefferson_County_KY_ZIP_Codes.geojson]</parent-name>
+            <remote-alias>Geometry</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>spatial</local-type>
+            <aggregation>Collect</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Jefferson_County_KY_ZIP_Codes.geojson_89C92AA339CE4130A28F533F208FB688]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[zipcodes_combined.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zipcodes_combined.csv_12DA058DE5BA46A1A00605C6FEBB418F]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>zipcode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[zipcode]</local-name>
+            <parent-name>[zipcodes_combined.csv]</parent-name>
+            <remote-alias>zipcode</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[zipcodes_combined.csv_12DA058DE5BA46A1A00605C6FEBB418F]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Children Population Percentage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Children Population Percentage]</local-name>
+            <parent-name>[zipcodes_combined.csv]</parent-name>
+            <remote-alias>Children Population Percentage</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zipcodes_combined.csv_12DA058DE5BA46A1A00605C6FEBB418F]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Teen Population Percentage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Teen Population Percentage]</local-name>
+            <parent-name>[zipcodes_combined.csv]</parent-name>
+            <remote-alias>Teen Population Percentage</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zipcodes_combined.csv_12DA058DE5BA46A1A00605C6FEBB418F]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Adult Population Percentage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Adult Population Percentage]</local-name>
+            <parent-name>[zipcodes_combined.csv]</parent-name>
+            <remote-alias>Adult Population Percentage</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[zipcodes_combined.csv_12DA058DE5BA46A1A00605C6FEBB418F]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OBJECTID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OBJECTID (Louisville_KY_Free_Public_Libraries.geojson)]</local-name>
+            <parent-name>[Louisville_KY_Free_Public_Libraries.geojson]</parent-name>
+            <remote-alias>OBJECTID</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Louisville_KY_Free_Public_Libraries.geojson_C9F128BC148D4C669886DE86C07AF613]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LFPL_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LFPL_NAME]</local-name>
+            <parent-name>[Louisville_KY_Free_Public_Libraries.geojson]</parent-name>
+            <remote-alias>LFPL_NAME</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[Louisville_KY_Free_Public_Libraries.geojson_C9F128BC148D4C669886DE86C07AF613]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LFPL_ADD</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LFPL_ADD]</local-name>
+            <parent-name>[Louisville_KY_Free_Public_Libraries.geojson]</parent-name>
+            <remote-alias>LFPL_ADD</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[Louisville_KY_Free_Public_Libraries.geojson_C9F128BC148D4C669886DE86C07AF613]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LFPL_LOC</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LFPL_LOC]</local-name>
+            <parent-name>[Louisville_KY_Free_Public_Libraries.geojson]</parent-name>
+            <remote-alias>LFPL_LOC</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[Louisville_KY_Free_Public_Libraries.geojson_C9F128BC148D4C669886DE86C07AF613]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LFPL_WEB</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LFPL_WEB]</local-name>
+            <parent-name>[Louisville_KY_Free_Public_Libraries.geojson]</parent-name>
+            <remote-alias>LFPL_WEB</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[Louisville_KY_Free_Public_Libraries.geojson_C9F128BC148D4C669886DE86C07AF613]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TELEPHONE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TELEPHONE]</local-name>
+            <parent-name>[Louisville_KY_Free_Public_Libraries.geojson]</parent-name>
+            <remote-alias>TELEPHONE</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[Louisville_KY_Free_Public_Libraries.geojson_C9F128BC148D4C669886DE86C07AF613]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LATITUDE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LATITUDE]</local-name>
+            <parent-name>[Louisville_KY_Free_Public_Libraries.geojson]</parent-name>
+            <remote-alias>LATITUDE</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Louisville_KY_Free_Public_Libraries.geojson_C9F128BC148D4C669886DE86C07AF613]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LONGITUDE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LONGITUDE]</local-name>
+            <parent-name>[Louisville_KY_Free_Public_Libraries.geojson]</parent-name>
+            <remote-alias>LONGITUDE</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Louisville_KY_Free_Public_Libraries.geojson_C9F128BC148D4C669886DE86C07AF613]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Geometry</remote-name>
+            <remote-type>8</remote-type>
+            <local-name>[Geometry (Louisville_KY_Free_Public_Libraries.geojson)]</local-name>
+            <parent-name>[Louisville_KY_Free_Public_Libraries.geojson]</parent-name>
+            <remote-alias>Geometry</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>spatial</local-type>
+            <aggregation>Collect</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Louisville_KY_Free_Public_Libraries.geojson_C9F128BC148D4C669886DE86C07AF613]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1 (library_by_location.csv)]</local-name>
+            <parent-name>[library_by_location.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[library_by_location.csv_1292E069C2AC4BDC8100B828B6F462DC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ItemLocation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ItemLocation]</local-name>
+            <parent-name>[library_by_location.csv]</parent-name>
+            <remote-alias>ItemLocation</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[library_by_location.csv_1292E069C2AC4BDC8100B828B6F462DC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zipcode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[zipcode (library_by_location.csv)]</local-name>
+            <parent-name>[library_by_location.csv]</parent-name>
+            <remote-alias>zipcode</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[library_by_location.csv_1292E069C2AC4BDC8100B828B6F462DC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ItemCollection</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ItemCollection]</local-name>
+            <parent-name>[library_by_location.csv]</parent-name>
+            <remote-alias>ItemCollection</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[library_by_location.csv_1292E069C2AC4BDC8100B828B6F462DC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percent]</local-name>
+            <parent-name>[library_by_location.csv]</parent-name>
+            <remote-alias>Percent</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[library_by_location.csv_1292E069C2AC4BDC8100B828B6F462DC]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' name='[Adult Population Percentage]' role='measure' type='quantitative' />
+      <column caption='Calculation1' datatype='real' name='[Calculation_747316111410487298]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='' />
+      </column>
+      <column datatype='real' name='[Children Population Percentage]' role='measure' type='quantitative' />
+      <column caption='F1 (library by location.csv)' datatype='integer' name='[F1 (library_by_location.csv)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[F1]' role='measure' type='quantitative' />
+      <column caption='Geometry (Louisville KY Free Public Libraries.geojson)' datatype='spatial' name='[Geometry (Louisville_KY_Free_Public_Libraries.geojson)]' role='measure' type='nominal' />
+      <column caption='Item Collection' datatype='string' name='[ItemCollection]' role='dimension' type='nominal' />
+      <column caption='Item Location' datatype='string' name='[ItemLocation]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[LATITUDE]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='Lfpl Add' datatype='string' name='[LFPL_ADD]' role='dimension' type='nominal' />
+      <column caption='Lfpl Loc' datatype='string' name='[LFPL_LOC]' role='dimension' type='nominal' />
+      <column caption='Lfpl Name' datatype='string' name='[LFPL_NAME]' role='dimension' type='nominal' />
+      <column caption='Lfpl Web' datatype='string' name='[LFPL_WEB]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[LONGITUDE]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='OBJECTID (Louisville KY Free Public Libraries.geojson)' datatype='integer' name='[OBJECTID (Louisville_KY_Free_Public_Libraries.geojson)]' role='measure' type='quantitative' />
+      <column caption='Objectid' datatype='integer' name='[OBJECTID]' role='measure' type='quantitative' />
+      <column caption='Shapearea' datatype='real' name='[SHAPEAREA]' role='measure' type='quantitative' />
+      <column caption='Shapelen' datatype='real' name='[SHAPELEN]' role='measure' type='quantitative' />
+      <column caption='Telephone' datatype='string' name='[TELEPHONE]' role='dimension' type='nominal' />
+      <column datatype='real' name='[Teen Population Percentage]' role='measure' type='quantitative' />
+      <column caption='Zipcode' datatype='string' name='[ZIPCODE]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <column caption='Jefferson_County_KY_ZIP_Codes.geojson' datatype='table' name='[__tableau_internal_object_id__].[Jefferson_County_KY_ZIP_Codes.geojson_89C92AA339CE4130A28F533F208FB688]' role='measure' type='quantitative' />
+      <column caption='Louisville_KY_Free_Public_Libraries.geojson' datatype='table' name='[__tableau_internal_object_id__].[Louisville_KY_Free_Public_Libraries.geojson_C9F128BC148D4C669886DE86C07AF613]' role='measure' type='quantitative' />
+      <column caption='library_by_location.csv' datatype='table' name='[__tableau_internal_object_id__].[library_by_location.csv_1292E069C2AC4BDC8100B828B6F462DC]' role='measure' type='quantitative' />
+      <column caption='zipcodes_combined.csv' datatype='table' name='[__tableau_internal_object_id__].[zipcodes_combined.csv_12DA058DE5BA46A1A00605C6FEBB418F]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Zipcode (Library By Location.Csv)' datatype='integer' default-format='*00000' name='[zipcode (library_by_location.csv)]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='Zipcode1' datatype='string' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <column-instance column='[__tableau_internal_object_id__].[Jefferson_County_KY_ZIP_Codes.geojson_89C92AA339CE4130A28F533F208FB688]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Jefferson_County_KY_ZIP_Codes.geojson_89C92AA339CE4130A28F533F208FB688:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[zipcodes_combined.csv_12DA058DE5BA46A1A00605C6FEBB418F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:zipcodes_combined.csv_12DA058DE5BA46A1A00605C6FEBB418F:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Adult Population Percentage]' derivation='Sum' name='[sum:Adult Population Percentage:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Children Population Percentage]' derivation='Sum' name='[sum:Children Population Percentage:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[F1]' derivation='Sum' name='[sum:F1:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[OBJECTID]' derivation='Sum' name='[sum:OBJECTID:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SHAPEAREA]' derivation='Sum' name='[sum:SHAPEAREA:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SHAPELEN]' derivation='Sum' name='[sum:SHAPELEN:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Teen Population Percentage]' derivation='Sum' name='[sum:Teen Population Percentage:qk]' pivot='key' type='quantitative' />
+      <group caption='Action (Zipcode)' hidden='true' name='[Action (Zipcode)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[ZIPCODE]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Zipcode1)' hidden='true' name='[Action (Zipcode1)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[zipcode]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Adult Population Percentage:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[__tableau_internal_object_id__].[cnt:Jefferson_County_KY_ZIP_Codes.geojson_89C92AA339CE4130A28F533F208FB688:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:OBJECTID:qk]&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:F1:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:SHAPEAREA:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Children Population Percentage:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[__tableau_internal_object_id__].[cnt:zipcodes_combined.csv_12DA058DE5BA46A1A00605C6FEBB418F:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Teen Population Percentage:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:SHAPELEN:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <_.fcp.ObjectModelSharedDimensions.true...object caption='Jefferson_County_KY_ZIP_Codes.geojson' id='Jefferson_County_KY_ZIP_Codes.geojson_89C92AA339CE4130A28F533F208FB688'>
+            <properties context=''>
+              <relation connection='ogrdirect.0nrc54u0q36o8k1a7civ90k7dcrp' name='Jefferson_County_KY_ZIP_Codes.geojson' table='[Jefferson_County_KY_ZIP_Codes.geojson]' type='table'>
+                <columns>
+                  <column datatype='integer' name='OBJECTID' ordinal='0' />
+                  <column datatype='string' name='ZIPCODE' ordinal='1' />
+                  <column datatype='real' name='SHAPEAREA' ordinal='2' />
+                  <column datatype='real' name='SHAPELEN' ordinal='3' />
+                  <column datatype='spatial' name='Geometry' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </_.fcp.ObjectModelSharedDimensions.true...object>
+          <object caption='Louisville_KY_Free_Public_Libraries.geojson' id='Louisville_KY_Free_Public_Libraries.geojson_C9F128BC148D4C669886DE86C07AF613'>
+            <properties context=''>
+              <relation connection='ogrdirect.04zu47i0s5cxdr169lkbn1x4qhk4' name='Louisville_KY_Free_Public_Libraries.geojson' table='[Louisville_KY_Free_Public_Libraries.geojson]' type='table'>
+                <columns>
+                  <column datatype='integer' name='OBJECTID' ordinal='0' />
+                  <column datatype='string' name='LFPL_NAME' ordinal='1' />
+                  <column datatype='string' name='LFPL_ADD' ordinal='2' />
+                  <column datatype='string' name='LFPL_LOC' ordinal='3' />
+                  <column datatype='string' name='LFPL_WEB' ordinal='4' />
+                  <column datatype='string' name='TELEPHONE' ordinal='5' />
+                  <column datatype='real' name='LATITUDE' ordinal='6' />
+                  <column datatype='real' name='LONGITUDE' ordinal='7' />
+                  <column datatype='spatial' name='Geometry' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='library_by_location.csv' id='library_by_location.csv_1292E069C2AC4BDC8100B828B6F462DC'>
+            <properties context=''>
+              <relation connection='textscan.129x3pa1qz7t5d13u0gb40phigiz' name='library_by_location.csv' table='[library_by_location#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='ItemLocation' ordinal='1' />
+                  <column datatype='integer' name='zipcode' ordinal='2' />
+                  <column datatype='string' name='ItemCollection' ordinal='3' />
+                  <column datatype='real' name='Percent' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <_.fcp.ObjectModelSharedDimensions.true...object caption='zipcodes_combined.csv' id='zipcodes_combined.csv_12DA058DE5BA46A1A00605C6FEBB418F'>
+            <properties context=''>
+              <relation connection='textscan.0as9g9l0i6e22m16237e90d5b9e6' name='zipcodes_combined.csv' table='[zipcodes_combined#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='zipcode' ordinal='1' />
+                  <column datatype='real' name='Children Population Percentage' ordinal='2' />
+                  <column datatype='real' name='Teen Population Percentage' ordinal='3' />
+                  <column datatype='real' name='Adult Population Percentage' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </_.fcp.ObjectModelSharedDimensions.true...object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[LFPL_NAME]' />
+              <expression op='[ItemLocation]' />
+            </expression>
+            <first-end-point object-id='Louisville_KY_Free_Public_Libraries.geojson_C9F128BC148D4C669886DE86C07AF613' />
+            <second-end-point object-id='library_by_location.csv_1292E069C2AC4BDC8100B828B6F462DC' />
+          </relationship>
+          <_.fcp.ObjectModelSharedDimensions.true...relationship>
+            <expression op='='>
+              <expression op='[ZIPCODE]' />
+              <expression op='[zipcode]' />
+            </expression>
+            <first-end-point object-id='Jefferson_County_KY_ZIP_Codes.geojson_89C92AA339CE4130A28F533F208FB688' />
+            <second-end-point object-id='zipcodes_combined.csv_12DA058DE5BA46A1A00605C6FEBB418F' />
+          </_.fcp.ObjectModelSharedDimensions.true...relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='zipcodes' name='[Action1_9CDE58731E224D9BB154404D5F2C0BD0]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='zipcode map' />
+      <link caption='zipcodes' delimiter=',' escape='\' expression='tsl:Dashboard%201?%5Bfederated.0a5mnjq1qjncte15ftkyq1bazxzi%5D.%5Bzipcode%5D~s0=&lt;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[ZIPCODE]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='zipcode map' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <datasources>
+      <datasource caption='Jefferson_County_KY_ZIP_Codes' name='federated.0a5mnjq1qjncte15ftkyq1bazxzi' />
+    </datasources>
+    <datasource-dependencies datasource='federated.0a5mnjq1qjncte15ftkyq1bazxzi'>
+      <column caption='Zipcode' datatype='string' name='[ZIPCODE]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <column caption='Zipcode1' datatype='string' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+    </datasource-dependencies>
+  </actions>
+  <worksheets>
+    <worksheet name='zipcode map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Jefferson_County_KY_ZIP_Codes' name='federated.0a5mnjq1qjncte15ftkyq1bazxzi' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0a5mnjq1qjncte15ftkyq1bazxzi'>
+            <column datatype='real' name='[Adult Population Percentage]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Children Population Percentage]' role='measure' type='quantitative' />
+            <column datatype='spatial' name='[Geometry]' role='measure' type='nominal' />
+            <column datatype='real' name='[Teen Population Percentage]' role='measure' type='quantitative' />
+            <column caption='Zipcode' datatype='string' name='[ZIPCODE]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+            <column-instance column='[Geometry]' derivation='Collect' name='[clct:Geometry:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ZIPCODE]' derivation='None' name='[none:ZIPCODE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[zipcode]' derivation='None' name='[none:zipcode:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Adult Population Percentage]' derivation='Sum' name='[sum:Adult Population Percentage:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Children Population Percentage]' derivation='Sum' name='[sum:Children Population Percentage:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Teen Population Percentage]' derivation='Sum' name='[sum:Teen Population Percentage:qk]' pivot='key' type='quantitative' />
+            <column caption='Zipcode1' datatype='string' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[none:ZIPCODE:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:ZIPCODE:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[none:zipcode:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:zipcode:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[none:ZIPCODE:nk]</column>
+            <column>[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[none:zipcode:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-family' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Teen Population Percentage:qk]' value='Times New Roman' />
+            <format attr='color' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Teen Population Percentage:qk]' value='#000000' />
+            <format attr='font-size' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Teen Population Percentage:qk]' value='10' />
+            <format attr='color' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Adult Population Percentage:qk]' value='#000000' />
+            <format attr='font-family' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Adult Population Percentage:qk]' value='Times New Roman' />
+            <format attr='font-size' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Adult Population Percentage:qk]' value='10' />
+            <format attr='font-family' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Children Population Percentage:qk]' value='Times New Roman' />
+            <format attr='font-size' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Children Population Percentage:qk]' value='10' />
+            <format attr='color' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Children Population Percentage:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Adult Population Percentage:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Teen Population Percentage:qk]' value='Times New Roman' />
+            <format attr='color' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Teen Population Percentage:qk]' value='#000000' />
+            <format attr='color' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Adult Population Percentage:qk]' value='#000000' />
+            <format attr='font-family' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Children Population Percentage:qk]' value='Times New Roman' />
+            <format attr='color' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Children Population Percentage:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[clct:Geometry:nk]' />
+              <lod column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[none:ZIPCODE:nk]' />
+              <tooltip column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Teen Population Percentage:qk]' />
+              <tooltip column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Adult Population Percentage:qk]' />
+              <tooltip column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Children Population Percentage:qk]' />
+              <geometry column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[clct:Geometry:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[Latitude (generated)]</rows>
+        <cols>[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{CB8D4D96-FF04-42CC-8FE2-31013B46C066}' />
+    </worksheet>
+    <worksheet name='zipcodes'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Times New Roman'>Age Ranges</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Jefferson_County_KY_ZIP_Codes' name='federated.0a5mnjq1qjncte15ftkyq1bazxzi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a5mnjq1qjncte15ftkyq1bazxzi'>
+            <column datatype='real' name='[Adult Population Percentage]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Children Population Percentage]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Teen Population Percentage]' role='measure' type='quantitative' />
+            <column caption='Zipcode' datatype='string' name='[ZIPCODE]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+            <column-instance column='[ZIPCODE]' derivation='None' name='[none:ZIPCODE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[zipcode]' derivation='None' name='[none:zipcode:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Adult Population Percentage]' derivation='Sum' name='[sum:Adult Population Percentage:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Children Population Percentage]' derivation='Sum' name='[sum:Children Population Percentage:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Teen Population Percentage]' derivation='Sum' name='[sum:Teen Population Percentage:qk]' pivot='key' type='quantitative' />
+            <column caption='Zipcode1' datatype='string' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Adult Population Percentage:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Teen Population Percentage:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Children Population Percentage:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Adult Population Percentage:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Teen Population Percentage:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[sum:Children Population Percentage:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[Action (Zipcode1)]'>
+            <groupfilter function='level-members' level='[zipcode]' user:ui-action-filter='[Action1_9CDE58731E224D9BB154404D5F2C0BD0]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[none:ZIPCODE:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:ZIPCODE:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[none:zipcode:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:zipcode:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[none:zipcode:nk]</column>
+            <column>[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[none:ZIPCODE:nk]</column>
+            <column>[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[Action (Zipcode1)]</column>
+            <column>[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-family' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[:Measure Names]' value='Times New Roman' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[:Measure Names]' value='Times New Roman' />
+            <format attr='color' field='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[:Measure Names]' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Times New Roman' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[:Measure Names]' />
+              <wedge-size column='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#59a14f' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A50A6EA9-973E-46E3-916C-C2021A799447}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='13' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='8' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+              <zone h='98000' id='6' type-v2='layout-basic' w='98400' x='800' y='1000' />
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='50000' id='3' name='zipcode map' w='54900' x='3300' y='4125' />
+        <zone h='25375' id='11' name='zipcodes' w='20100' x='60800' y='15500' />
+        <zone fixed-size='160' h='12125' id='12' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='60900' y='2125'>
+          <zone h='10375' id='14' name='zipcodes' pane-specification-id='8' param='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[:Measure Names]' type-v2='color' w='16000' x='60900' y='2125'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='9' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='50000' id='3' is-fixed='true' name='zipcode map' w='54900' x='3300' y='4125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{4311F0FA-2629-4DA3-9C47-9454E78CFEE3}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='zipcodes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='8' param='[federated.0a5mnjq1qjncte15ftkyq1bazxzi].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E5225533-7D32-4B2A-A64C-2A47F8F72DC1}' />
+    </window>
+    <window class='worksheet' name='zipcode map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5F7B8450-1813-4EAC-8C28-4E38888A401A}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='zipcode map'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='zipcodes' />
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{B0AAA0C6-E854-454F-A018-03EF2D51F206}' />
+    </window>
+  </windows>
+</workbook>
