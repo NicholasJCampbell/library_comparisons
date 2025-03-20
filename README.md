@@ -7,11 +7,11 @@ This is the capstone project for Code:Louisville and uses Python and Tableau.
 
 ## Data Sources
 
-[The Louisville Public Library Collection](https://data.louisvilleky.gov/datasets/LOJIC::louisville-metro-ky-library-collection-inventory-/about) downloaded 12/18/2024 
-[Age Demographics by Zipcode](https://data.census.gov/) downloaded 12/18/2024
-[Library Spatial Data](https://data.louisvilleky.gov/datasets/LOJIC::louisville-ky-free-public-libraries-1/about) downloaded 12/18/2024
-[Zipcode Spatial Data](https://data.louisvilleky.gov/datasets/LOJIC::jefferson-county-ky-zip-codes/about) downloaded 12/18/2024
-[Education Demographics by Zipcode](https://data.census.gov/) downloaded 2/26/2025
+- [The Louisville Public Library Collection](https://data.louisvilleky.gov/datasets/LOJIC::louisville-metro-ky-library-collection-inventory-/about) downloaded 12/18/2024 
+- [Age Demographics by Zipcode](https://data.census.gov/) downloaded 12/18/2024
+- [Library Spatial Data](https://data.louisvilleky.gov/datasets/LOJIC::louisville-ky-free-public-libraries-1/about) downloaded 12/18/2024
+- [Zipcode Spatial Data](https://data.louisvilleky.gov/datasets/LOJIC::jefferson-county-ky-zip-codes/about) downloaded 12/18/2024
+- [Education Demographics by Zipcode](https://data.census.gov/) downloaded 2/26/2025
 
 ---
 ##Project Outline
