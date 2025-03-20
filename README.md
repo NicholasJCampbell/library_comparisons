@@ -7,9 +7,9 @@ This is the capstone project for Code:Louisville and uses Python and Tableau.
 
 ### Conclusions/Questions
 #### Age Comparisons
-In general, the teen book collection is a much smaller percentage than the other books, this is true even in the areas with much larger teen demographics in the western and southern areas (cf. Portland, Iroquois, Shively, Southwest, South Central). This is the opposite of the children's collection (the percentage of children's books are significantly higher than the population at every branch except the Main branch).
+In general, the teen book collection is a much smaller percentage than the other books, this is true even in the areas with much larger teen demographics in the western and southern areas (cf. Portland, Iroquois, Shively, Southwest, South Central). This is the opposite of the children's collections. The percentage of children's books in the library collections are significantly higher than the percentage of the neighborhood population that are children at every branch except the Main branch.
 #### Education and Recency Comparisons
-Portland, Shawnee, and Fairdale have some of the lowest percentages of college graduates (and education levels in general) but fairly high percentages of books published in the past 5 years (also fairly high for books published between 2010-2019). So, the neighborhoods with higher education levels do not necessarily receive all the newest books (cf. Portland and St. Matthews/Eline or Northeast).
+Portland, Shawnee, and Fairdale have some of the lowest percentages of college graduates (and education levels in general) but fairly high percentages of books published in the past 5 years (same for books published between 2010-2019). So, the neighborhoods with higher education levels do not necessarily receive all the newest books (cf. Portland and St. Matthews/Eline or Northeast).
 
 ## Data Sources
 
