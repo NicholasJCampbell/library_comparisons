@@ -14,9 +14,37 @@ This is the capstone project for Code:Louisville and uses Python and Tableau.
 - [Education Demographics by Zipcode](https://data.census.gov/) downloaded 2/26/2025
 
 ---
-##Project Outline
+## Project Outline
 - **Data Exploration:** Jupyter notebooks in VS Code.
 - **Analysis:** Python with the Pandas and Numpy packages for data cleaning.
 - **Visualizations :** Initial visualizations using Matplotlib in Jupyter notebooks. 
 - **Dashboard:** Created [Tableau Dashboard](https://public.tableau.com/views/mapviz_17424942099340/Age?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
+
+---
+
+## Getting Started
+
+To run this project, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/your-username/your-project.git`
+2. Install the necessary dependencies: `pip install -r requirements.txt`
+3. Explore the Jupyter notebooks or scripts in the respective folders.
+
+###  Virtual Environment Instructions
+
+1. After you have cloned the repo to your machine, navigate to the project 
+folder in GitBash/Terminal.
+1. Create a virtual environment in the project folder. 
+1. Activate the virtual environment.
+1. Install the required packages. 
+1. When you are done working on your repo, deactivate the virtual environment.
+
+Virtual Environment Commands
+
+| Command | Linux/Mac | GitBash |
+|---------|-----------|---------|
+| Create | `python3 -m venv venv` | `python -m venv venv` |
+| Activate | `source venv/bin/activate` | `source venv/Scripts/activate` |
+| Install | `pip install -r requirements.txt` | `pip install -r requirements.txt` |
+| Deactivate | `deactivate` | `deactivate` |
 
