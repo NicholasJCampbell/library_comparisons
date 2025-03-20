@@ -7,7 +7,7 @@ The goal is to see whether the collections in the libraries match the age demogr
 In a second notebook (and Tableau dashboard), I used the library collection data in comparison with education level data from the Census Bureau. 
 The education levels for each zipcode are compared with the publication dates for the adult collection in each library (binned into decades).
 
-The Tableau visualization can be found here: https://public.tableau.com/views/mapviz_17416520154530/Education?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+The Tableau visualization can be found here: https://public.tableau.com/views/mapviz_17424942099340/Age?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 *** For the maps, the library pie chart will update when a library location is clicked on. The zipcode data will update just by hovering over it with the cursor.
 
 
