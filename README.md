@@ -48,3 +48,15 @@ Virtual Environment Commands
 | Install | `pip install -r requirements.txt` | `pip install -r requirements.txt` |
 | Deactivate | `deactivate` | `deactivate` |
 
+---
+
+## Features Utilized for the project
+
+  | Feature        | Description                           |
+  |----------------|---------------------------------------|
+  | Read TWO data files| Used 1 CSV file from Louisville Open Data, multiple (78 total) CSVs from the Census Bureau, 2 GeoJSONs from Louisville Open Data |
+  | Clean your data and perform a pandas merge with your two data sets, then calculate some new values based on the new data set.      | Cleaned and merged data (two different ways) with Pandas and in Tableau. Calculated population percentages in both datasets. |
+  | Make 3 Matplotlib visualizations | Made several bar plots for initial data interpretation. |
+  | Make a Tableau dashboard  | Made two [Tableau dashboards]([https://public.tableau.com/app/discover/viz-of-the-day](https://public.tableau.com/views/mapviz_17424942099340/Age?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link). |
+  | Utilize a virtual environment | Made a virtual environment and included instructions in the ReadMe. |
+  | Annotate your code with markdown cells in Jupyter Notebook | Included notes describing each code block and section descriptions in Markdown cells. |
