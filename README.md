@@ -5,7 +5,7 @@
 This project utilizes demographic information from the Census Bureau and the Louisville Free Public Library Collection. The goal of the project is to evaluate whether the collection of each library matches the demographics of its respective neighborhood.
 This is the capstone project for Code:Louisville and uses Python and Tableau.
 
-### Conclusions/Questions
+### Conclusions/Summary
 #### Age Comparisons
 In general, the teen book collection is a much smaller percentage than the other books, this is true even in the areas with much larger teen demographics in the western and southern areas (cf. Portland, Iroquois, Shively, Southwest, South Central). This is the opposite of the children's collections. The percentage of children's books in the library collections are significantly higher than the percentage of the neighborhood population that are children at every branch except the Main branch.
 #### Education and Recency Comparisons
