@@ -26,7 +26,7 @@ This is the capstone project for Code:Louisville and uses Python and Tableau.
 
 To run this project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/your-project.git`
+1. Clone the repository: `git clone https://github.com/NicholasJCampbell/library_comparisons.git`
 2. Install the necessary dependencies: `pip install -r requirements.txt`
 3. Explore the Jupyter notebooks or scripts in the respective folders.
 
