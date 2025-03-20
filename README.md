@@ -1,8 +1,8 @@
-# Library and Zipcode Comparison
+# Library and Neighborhood Comparison
 
 ## Project Overview
 
-This project utilizes demographic information from the Census Bureau and the Louisville Free Public Library Collection.
+This project utilizes demographic information from the Census Bureau and the Louisville Free Public Library Collection. The goal of the project is to evaluate whether the collection of each library matches the demographics of its respective neighborhood.
 This is the capstone project for Code:Louisville and uses Python and Tableau.
 
 ### Conclusions/Questions
