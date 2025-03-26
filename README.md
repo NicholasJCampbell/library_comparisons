@@ -66,3 +66,4 @@ Virtual Environment Commands
   | Make a Tableau dashboard  | Made two [Tableau dashboards](https://public.tableau.com/views/mapviz_17424942099340/Age?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link). |
   | Utilize a virtual environment | Made a virtual environment and included instructions in the ReadMe. |
   | Annotate your code with markdown cells in Jupyter Notebook | Included notes describing each code block and section descriptions in Markdown cells. |
+  | Build a custom data dictionary | Created a data dictionaries markdown files (one for the final dataset of each comparison) |
