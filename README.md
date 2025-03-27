@@ -24,7 +24,7 @@ Portland, Shawnee, and Fairdale have some of the lowest percentages of college g
 - **Data Exploration:** Jupyter notebooks in VS Code.
 - **Analysis:** Python with the Pandas and Numpy packages for data cleaning.
 - **Visualizations :** Initial visualizations using Matplotlib in Jupyter notebooks. 
-- **Dashboard:** Created [Tableau Dashboard](https://public.tableau.com/views/mapviz_17424942099340/Age?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
+- **Dashboard:** Created [Tableau Dashboard](https://public.tableau.com/shared/4S8N4SGCJ?:display_count=n&:origin=viz_share_link).
 
 ---
 
@@ -63,7 +63,7 @@ Virtual Environment Commands
   | Read TWO data files| Used 1 CSV file from Louisville Open Data, multiple (78 total) CSVs from the Census Bureau, 2 GeoJSONs from Louisville Open Data |
   | Clean your data and perform a pandas merge with your two data sets, then calculate some new values based on the new data set.      | Cleaned and merged data (two different ways) with Pandas and in Tableau. Calculated population percentages in both datasets. |
   | Make 3 Matplotlib visualizations | Made several bar plots for initial data interpretation. |
-  | Make a Tableau dashboard  | Made two [Tableau dashboards](https://public.tableau.com/views/mapviz_17424942099340/Age?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link). |
+  | Make a Tableau dashboard  | Made two [Tableau dashboards](https://public.tableau.com/shared/4S8N4SGCJ?:display_count=n&:origin=viz_share_link). |
   | Utilize a virtual environment | Made a virtual environment and included instructions in the ReadMe. |
   | Annotate your code with markdown cells in Jupyter Notebook | Included notes describing each code block and section descriptions in Markdown cells. |
   | Build a custom data dictionary | Created a data dictionaries markdown files (one for the final dataset of each comparison) |
